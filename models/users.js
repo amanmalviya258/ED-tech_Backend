@@ -38,20 +38,17 @@ const userSchema = new mongoose.Schema({
   },
   courses: {
     type: mongoose.Schema.Types.ObjectId,
-    required: true,
     ref:'courses'
   },
   profile: {
     type: mongoose.Schema.Types.ObjectId,
-    required: true,
     ref:'profile'
   },
   courseProgress: {
     type: mongoose.Schema.Types.ObjectId,
-    required: true,
     ref:'courseProgress'
   },
 });
 
 
-module.exports = mongoose.model("user" , userSchema);
+module.exports = mongoose.model("user",userSchema);
