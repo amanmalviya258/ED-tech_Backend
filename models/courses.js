@@ -34,12 +34,12 @@ const coursesSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: "tags",
   },
-  studentsEnrolled:{
+  studentsEnrolled:[{
     type: mongoose.Schema.Types.ObjectId,
     ref: "users",
     required:true,
 
-  }
+  }]
 });
 
 module.exports = mongoose.model("courses", userSchema);
